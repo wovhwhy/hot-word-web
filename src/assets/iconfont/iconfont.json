@@ -1,0 +1,23 @@
+{
+  "id": "4502270",
+  "name": "mydesign",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4633192",
+      "name": "搜索",
+      "font_class": "sousuo1",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "9193452",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    }
+  ]
+}
