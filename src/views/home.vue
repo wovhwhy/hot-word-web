@@ -1,7 +1,9 @@
 <template>
   <div main>
     <div header>
-     <img src="../assets/首页1.png" alt=""> 
+      <lun></lun>
+     <!-- <img src="../assets/首页1.png" alt="">  -->
+
   </div>
   <div class="nav">
     <span>热词潮流，尽在指尖</span>
@@ -32,9 +34,11 @@
   <script>
 import lun from '../components/lun.vue';
 import { dateEquals } from 'element-plus'
+import Lun from '../components/lun.vue';
   export default{
     name:'home',
     components:{
+        Lun
 },
 data(){
 return{
@@ -47,7 +51,27 @@ return{
         {word:' 爷青回:' , mean:'是“爷的青春又回来了”的缩写，用来表达人在变化后的环境中面对曾经熟悉的人和事物时，油然而生的一种喜悦之情。'},
         {word:'真香:' , mean:'意思是打脸。这个梗的由来是《变形记》。其中有一期的城市主人公去了乡村后，发誓不吃乡村家庭的蛋炒饭，后来又吃了，并说“真香”。'},
         {word:'夺笋' , mean:'“夺笋“是“多损”的东北方言谐音，多用于吐槽某人“很缺德”，由网络主播带火。相声中常能听到将“多”读为二声的“多损呐”，但用动宾短语“夺笋”来记录音变后的“多损”，并以文字形式大范围流行仍是近两年的新语言现象。由于“夺笋”包含着实体“笋”，又极具画面感，便逐渐衍生出“山上的笋都被你夺完了”等变体,以及像“大熊猫点外卖——笋到家了”这样的歇后语。2021年,与“夺笋”类似的“槽言槽语”还有诸如“你礼貌吗”“离谱”“……了但没完全……”“我不理解”等。'
-},]
+},],
+bannerList: [
+            {
+            id: '1',
+            imgUrl: '/trunk.png'
+              },
+              {
+            id: '2',
+            imgUrl: '/trunk.png'
+              },
+              // {
+            // id: '3',
+            // imgUrl: '../../public/view.jpeg'
+            //   },
+            // {
+            // id: '4',
+            // imgUrl: '../../public/view.jpeg'
+            //   },
+
+
+]
     }
   }
 }
@@ -59,10 +83,7 @@ return{
   margin: 20px;
   padding: 20px;
   }
-  .main img{
-    width: 97%;
-    height: 700px;
-  }
+  
   .nav{
     background-color: rgba(33, 27, 27, 0.826);
     height: 50px;
@@ -156,5 +177,6 @@ return{
     font-size: 18px;
     color: white;
   }
+
 </style>
  
