@@ -49,12 +49,10 @@ export default {
 
 <style scoped>
  .body{
-  /* background-color: grey; */
   width: 100%;
   height: 1000px;
 } 
 .main{
- /* 设置中间区域背景颜色 */
   width: 100%;
   height: 100px;
 }
