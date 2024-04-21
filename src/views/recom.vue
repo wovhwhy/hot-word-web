@@ -5,7 +5,7 @@
     <img src="../assets/recom.png" alt="">
   <div class="search-box">
     <input  placeholder="搜一搜" icon type="搜索" extraclass="icon"  v-model="wordName"/>
-    <el-button type="primary" plain class="iconfont icon-sousuo1"  @click="queryWordMeaning(wordName)" >搜索</el-button>
+    <el-button type="primary" plain class="iconfont icon-sousuo1"  @click="goSearch(wordName)" >搜索</el-button>
   </div>
 </div>
 <div class="text">
@@ -32,7 +32,7 @@
 import icon from "../components/icon.vue"
 import foot from "../components/foot.vue";
 import hr1 from "../components/hr1.vue";
-import user from '../api/user';
+import { ElMessage } from 'element-plus'
 export default{
   components:{
     foot,hr1,icon,
@@ -40,7 +40,6 @@ export default{
   data(){
     return{
       wordName: '',
-      word: [],
       words: [
         {word:'主打一个××:' , mean:'一种流行的网络句式，强调某个人或某件事物在特定领域内的特色和优势。如“主打一个高性价比”、“主打一个便宜”、“主打一个方便”、“主打一个开心”。'},
         {word:'命运的齿轮开始转动:' , mean:'指改写命运的某个瞬间或影响人生轨迹的某个转折点。这个短语表面上说的是成功背后的运气、机遇等偶然因素，更多强调的是在压力和逆境中应尽快行动起来，才能把握自我命运曲线的走势、创造属于自己的辉煌"。'},
@@ -60,13 +59,19 @@ export default{
     };
   },
   methods:{
-    // gosearch(wordName,wordMeaning){
-    //   this.$router.push({ name: 'search', params:{ wordName: wordName ,wordMeaning: wordMeaning } });
-    // },
-    async queryWordMeaning(wordName) {
-            const wordMeaning = await user.getWordDetal({ wordName });
-            this.word=wordMeaning[0];
-            await this.$router.push(`/search/${wordMeaning[0].wordName}`);
+    open4() {  
+      ElMessage({  
+        message: '请输入一个你想查找的热词',  
+        type: 'error',  
+        plain: true,  
+      });  
+    },
+    goSearch(wordName) {
+        if(wordName === ''){
+          this.open4();
+        }else{
+          this.$router.push({ name: 'search', params:{ wordName: wordName } });
+        }
     }
   }
 }
