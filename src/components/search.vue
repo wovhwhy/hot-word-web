@@ -6,8 +6,8 @@
     <div class="search" >
       <!-- 搜索关键词 -->
       <!-- $route.params.keyword显示搜索关键词 -->
-       <h3> {{ $route.params.keyword }}</h3> 
-      <p> {{ p }}</p>
+      <h3> {{ word.wordName }}</h3> 
+      <p> {{ word.wordMeaning }}</p>
     </div>
   </div>
   <div class="end">
@@ -19,6 +19,7 @@
 
 <script>
 import foot from '../components/foot.vue'
+import user from '../api/user';
 export default {
   components:{
         foot,
@@ -26,22 +27,30 @@ export default {
   data() {
     return {
       p: '', // 给属性 p 一个初始值
-      searchKeyWord:this.$route.params.searchKeyWord
-      
+      searchKeyWord:this.$route.params.searchKeyWord,
+      word:{
+        wordName:this.$route.params.wordName,
+        wordMeaning:''
+      }
     };
   },
   created() {
-    this.searchContent(this.$route.params.searchKeyWord); // 调用搜索函数
+    this.searchContent(); // 调用搜索函数
   },
   methods: {
     //传入路由参数中的关键词并进行搜索
-    searchContent(searchKeyWord) {
+    searchContent() {
       // 模拟搜索逻辑，这里可以替换为实际的搜索函数
-      if (searchKeyWord === 'example') {
-        this.p = this.searchKeyWord;
-      } else {
-        this.p = '未找到相关搜索结果。';
-      }
+      this.getWordMeaning(this.word.wordName);
+      if (this.word.wordMeaning == '') {
+        this.word.wordMeaning = '未找到相关搜索结果。';
+        // this.word.wordName = '';
+      } 
+    },
+
+    async getWordMeaning(wordName){
+        const wordMeaning = await user.getWordDetal({ wordName });
+        this.word.wordMeaning=wordMeaning[0].wordMeaning;
     }
   }
 };
