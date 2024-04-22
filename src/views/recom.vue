@@ -1,16 +1,15 @@
 <template>
-
   <div class=recom>
  <div class=main>
     <img src="../assets/recom.png" alt="">
-  <div class="search-box">
-    <input  placeholder="搜一搜" icon type="搜索" extraclass="icon"  v-model="wordName"/>
-    <el-button type="primary" plain class="iconfont icon-sousuo1"  @click="goSearch(wordName)" >搜索</el-button>
-  </div>
 </div>
 </div>
 <section class="w3l-news" id="news">
     <div id="grids5-block" class="py-5">
+      <div class="search-box">
+    <input  placeholder="搜一搜" icon type="搜索" extraclass="icon"  v-model="wordName"/>
+    <el-button type="primary" plain class="iconfont icon-sousuo1"  @click="goSearch(wordName)" >搜索</el-button>
+  </div>
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="row">
                 <div  v-for="word in words" :key="word.wordId" class="col-lg-4 col-md-6 mt-5">
@@ -86,21 +85,17 @@ export default{
   position: relative;
   }
 .main img{
-    width: 98%;
-    height: 600px;
+    width: 95%;
+    height: 850px;
     position: relative;
   }
  .search-box {
-  position: absolute;
-  top: 30px;
   text-align: center;
-  padding: 10px;
   border-radius: 5px;
   left: 50%; 
-  transform: translate(-50%, -50%);
 } 
 input {
-  width:400px;
+  width:600px;
   height: 50px;
   padding: 5px;
   font-size: 16px;
@@ -113,8 +108,8 @@ button {
   border: none;
   border-radius: 3px;
   margin-left: 5px;
-  width: 80px;
-  height: 40px;
+  width: 100px;
+  height: 50px;
 }
 .text{
   margin: 50px 20px;
