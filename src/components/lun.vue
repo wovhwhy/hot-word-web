@@ -18,7 +18,7 @@ export default {
 
 <style>
   .el-carousel__item {
-    height:700px; /* 设置图片容器高度 */
+    height:701px; /* 设置图片容器高度 */
     display: flex;
     justify-content: center;
     align-items: center;
