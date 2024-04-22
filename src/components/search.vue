@@ -93,6 +93,7 @@ h3{
 }
 p{
   font-size: 25px;
+  color: rgba(0, 0, 0, 0.664);
 }
 .end{
   bottom: 0;
