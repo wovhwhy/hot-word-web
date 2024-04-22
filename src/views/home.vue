@@ -2,7 +2,6 @@
   <div main>
     <div header>
       <lun></lun>
-     <!-- <img src="../assets/首页1.png" alt="">  -->
 
   </div>
   <div class="nav">
@@ -19,26 +18,30 @@
     <div class="text">
   <h2>你可能感兴趣</h2>
   <hr class="hr-solid">
-  <div class="content1" v-for="item in words" :key="item.word"> 
+  <div class="ban"> 
+  <ban></ban>
+</div>
+  <!-- <div class="content1" v-for="item in words" :key="item.word"> 
    <h3>{{ item.word }}</h3>
-   <p>{{ item.mean }}</p>
+   <p>{{ item.mean }}</p> -->
   </div>
     </div>
     <div class="end">
       <span>版权声明 | 联系方式 | 刊登广告 | 关于我们<br>版权所有</span>
     </div>
-  </div>
+  <!-- </div> -->
   
   </template>
   
   <script>
+import ban from '../components/ban.vue';
 import lun from '../components/lun.vue';
 import { dateEquals } from 'element-plus'
 import Lun from '../components/lun.vue';
   export default{
     name:'home',
     components:{
-        Lun
+        Lun,ban
 },
 data(){
 return{
@@ -52,26 +55,6 @@ return{
         {word:'真香:' , mean:'意思是打脸。这个梗的由来是《变形记》。其中有一期的城市主人公去了乡村后，发誓不吃乡村家庭的蛋炒饭，后来又吃了，并说“真香”。'},
         {word:'夺笋' , mean:'“夺笋“是“多损”的东北方言谐音，多用于吐槽某人“很缺德”，由网络主播带火。相声中常能听到将“多”读为二声的“多损呐”，但用动宾短语“夺笋”来记录音变后的“多损”，并以文字形式大范围流行仍是近两年的新语言现象。由于“夺笋”包含着实体“笋”，又极具画面感，便逐渐衍生出“山上的笋都被你夺完了”等变体,以及像“大熊猫点外卖——笋到家了”这样的歇后语。2021年,与“夺笋”类似的“槽言槽语”还有诸如“你礼貌吗”“离谱”“……了但没完全……”“我不理解”等。'
 },],
-bannerList: [
-            {
-            id: '1',
-            imgUrl: '/trunk.png'
-              },
-              {
-            id: '2',
-            imgUrl: '/trunk.png'
-              },
-              // {
-            // id: '3',
-            // imgUrl: '../../public/view.jpeg'
-            //   },
-            // {
-            // id: '4',
-            // imgUrl: '../../public/view.jpeg'
-            //   },
-
-
-]
     }
   }
 }
@@ -176,6 +159,9 @@ bannerList: [
     text-align: center;
     font-size: 18px;
     color: white;
+  }
+  .ban{
+    font-size: 80px;
   }
 
 </style>

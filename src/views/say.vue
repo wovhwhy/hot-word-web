@@ -3,11 +3,11 @@
     <div class="card">
       <h2>留言板</h2>
       <div class="text1">
-        <span>用户名：</span>
+        <span>Name:</span>
         <input type="text" v-model="name" placeholder="请输入您的用户名">
       </div>
       <div class="text2">
-        <span>留言内容：</span>
+        <span>Message:</span>
         <textarea v-model="message" style="vertical-align: top;" placeholder="请输入您的留言"></textarea>
       </div>
       <el-button type="send"  @click="sendMessage">发送留言</el-button>
@@ -81,7 +81,7 @@ h2 {
 .text1 {
   display: flex;
   margin-top: 60px;
-  margin-left: 50px;
+  margin-left: 55px;
   height: 35px;
 }
 button {
