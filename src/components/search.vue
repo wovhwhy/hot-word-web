@@ -1,20 +1,29 @@
 <template>
   <div class="body">
   <div class="main">
-    <h2>搜索结果：</h2>
-    <hr class="hr-solid">
-    <div class="search" >
-      <!-- 搜索关键词 -->
-      <!-- $route.params.keyword显示搜索关键词 -->
-      <h3> {{ word.wordName }}</h3> 
+    <el-card style="width:1500px; height:800px;" shadow="always">
+      <div class="common-layout">
+    <el-container>
+      <el-header><h2>搜索结果</h2></el-header>
+      <hr class="hr-solid">
+      <el-container>
+        <el-aside  class="left" width="750px" height="auto">
+          <img class="responsive-image" src="../assets/图片2.png" alt="image">
+        </el-aside>
+        <el-main>
+          <h3> {{ word.wordName }}</h3> 
+          <br>
       <p> {{ word.wordMeaning }}</p>
+        </el-main>
+      </el-container>
+    </el-container>
+  </div>
+    </el-card>
     </div>
   </div>
   <div class="end">
     <foot/>
   </div>
-</div>
-
 </template>
 
 <script>
@@ -62,8 +71,10 @@ export default {
   height: 1000px;
 } 
 .main{
-  width: 100%;
-  height: 100px;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  margin-top: 100px;
 }
 .search {
   display: flex;
@@ -75,12 +86,14 @@ export default {
 h2{
   font-size: 32px;
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 h3{
   font-size: 28px;
 }
 p{
   font-size: 25px;
+  color: rgba(0, 0, 0, 0.664);
 }
 .end{
   bottom: 0;
@@ -90,5 +103,15 @@ p{
 		border: 1px;
 		border-top: 2px solid #d0d0d5;
     margin-bottom: 20px;
+    margin-top: 20px;
 	}
+.left{
+  margin-top: 20px;
+}
+.responsive-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain; /* 保持图片比例并填充整个容器 */
+}
+
 </style>
