@@ -41,11 +41,11 @@ export default {
 
 <style scoped>
 .login{
-  margin-top:400px;
+  margin-top:300px;
   
 }
 .image{
-background:url("../assets/登录.png");
+background:url("../assets/背景.jpg");
 width:99%;	
 position:fixed;
 height:100%;

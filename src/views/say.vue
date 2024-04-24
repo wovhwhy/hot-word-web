@@ -1,7 +1,7 @@
 <template>
   <div class="say">
     <div class="card">
-      <h2>留言板</h2>
+      <h1>留言板</h1>
       <div class="text1">
         <span>Name:</span>
         <input type="text" v-model="name" placeholder="请输入您的用户名">
@@ -58,20 +58,22 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  margin-top: 15px;
-  font-size: 30px;
+h1 {
+  margin-top: 20px;
+  font-size: 50px;
 }
 .card {
-  background: #ffc0cb93;
-  width: 40%;
-  height: 700px;
+  background:rgba(138,125,127,0.5) ;
+  width: 60%;
+  height: 100%;
+  backdrop-filter: blur(10px); /*模糊度，磨砂感 */
 }
+
 .say {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../assets/登录.png");
+  background: url("../assets/背景.jpg");
   width: 99%;
   position: fixed;
   height: 100%;
@@ -80,9 +82,11 @@ h2 {
 }
 .text1 {
   display: flex;
-  margin-top: 60px;
-  margin-left: 55px;
   height: 35px;
+  margin-left:310px;
+  /* justify-content:flex-start; */
+  /* align-items:center ;  */
+  margin-top: 200px;
 }
 button {
   margin-top: 20px;
@@ -92,11 +96,13 @@ button {
   margin-top: 20px;
   height: 200px;
   margin-left: 25px;
+  justify-content: center;
 }
 textarea {
   width: 600px;
   font-size: 15px;
   padding-top: 10px;
+  font-size: 15px
 }
 .text1 input {
   width: 200px;
@@ -138,12 +144,15 @@ ul, li {
 }
 li{
   margin-top: 10px;
-  font-size: 19px;
+  font-size: 22px;
 }
 .hr-solid {
 		border: 1;
 		border-top: 1px solid #6d6d85;
     margin-bottom: 20px;
 	}
-
+.text1 span,
+.text2 span{
+margin-right: 20px ;
+}
 </style>
