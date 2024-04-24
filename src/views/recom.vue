@@ -15,10 +15,10 @@
             <div class="row">
                 <div  v-for="word in words" :key="word.wordId" class="col-lg-4 col-md-6 mt-5">
                     <div class="grids5-info">
-                        <a href="blog-single.html" class="d-block zoom"><img :src=word.img alt=""
+                        <a  @click="goSearch(word.wordName,word.img)" class="d-block zoom"><img :src=word.img alt=""
                                 class="img-fluid news-image" /></a>
                         <div class="blog-info">
-                            <h4><a href="blog-single.html">{{ word.wordName }}</a></h4>
+                            <h4><a @click="goSearch(word.wordName)">{{ word.wordName }}</a></h4>
                             <p class="date"><span class="fa fa-calendar mr-2"></span> {{ word.date }}</p>
                             <a href="blog-single.html" class="btn btn-news mt-4">Read More</a>
                         </div>
@@ -60,11 +60,11 @@ export default{
         plain: true,  
       });  
     },
-    goSearch(wordName) {
+    goSearch(wordName,img) {
         if(wordName === ''){
           this.open4();
         }else{
-          this.$router.push({ name: 'search', params:{ wordName: wordName } });
+          this.$router.push({ name: 'search', params:{ wordName: wordName ,img: img} });
         }
     },
     async getWord(){
