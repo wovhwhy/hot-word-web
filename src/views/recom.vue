@@ -4,13 +4,13 @@
     <img src="../assets/recom.png" alt="">
 </div>
 </div>
- <section class="w3l-news" id="news">
-    <div id="grids5-block" class="py-5">
+<div id="grids5-block" class="py-5">
       <div class="search-box">
     <input  placeholder="搜一搜" icon type="搜索" extraclass="icon"  v-model="wordName"/>
     <el-button type="primary" plain class="iconfont icon-sousuo1"  @click="goSearch(wordName)" >搜索</el-button>
   </div>
- 
+  </div>
+<section class="w3l-news" id="news">
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="row">
                 <div  v-for="word in words" :key="word.wordId" class="col-lg-4 col-md-6 mt-5">
@@ -27,7 +27,6 @@
               
             </div>
         </div>
-    </div>
 </section>
 <foot></foot> 
 </template>
@@ -37,13 +36,12 @@
 <script>
 import icon from "../components/icon.vue"
 import foot from "../components/foot.vue";
-import hr1 from "../components/hr1.vue";
 import { ElMessage } from 'element-plus';
 import "../assets/css/style-liberty.css";
 import user from "../api/user";
 export default{
   components:{
-    foot,hr1,icon,
+    foot,icon,
   },
   data(){
     return{
@@ -131,11 +129,5 @@ h2{
     font-size: 28px;
     margin-top: 25px;
  }
-
-.hr-solid {
-		border: 1;
-		border-top: 2px solid #d0d0d5;
-    margin-bottom: 20px;
-	}
 
 </style>

@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 .image{
-background:url("../assets/登录.png");
+background:url("../assets/背景.jpg");
 width:99%;	
 position:fixed;
 height:100%;
@@ -50,7 +50,7 @@ background-size:100%;
  margin-right: 5px;
 }
 .login{
-  margin-top:400px
+  margin-top:300px
 }
 h2 {
   text-align: center;
