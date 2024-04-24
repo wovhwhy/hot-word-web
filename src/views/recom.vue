@@ -4,17 +4,18 @@
     <img src="../assets/recom.png" alt="">
 </div>
 </div>
-<section class="w3l-news" id="news">
+ <section class="w3l-news" id="news">
     <div id="grids5-block" class="py-5">
       <div class="search-box">
     <input  placeholder="搜一搜" icon type="搜索" extraclass="icon"  v-model="wordName"/>
     <el-button type="primary" plain class="iconfont icon-sousuo1"  @click="goSearch(wordName)" >搜索</el-button>
   </div>
+ 
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="row">
                 <div  v-for="word in words" :key="word.wordId" class="col-lg-4 col-md-6 mt-5">
                     <div class="grids5-info">
-                        <a  @click="goSearch(word.wordName)" class="d-block zoom"><img :src=word.img alt=""
+                        <a  @click="goSearch(word.wordName,word.img)" class="d-block zoom"><img :src=word.img alt=""
                                 class="img-fluid news-image" /></a>
                         <div class="blog-info">
                             <h4><a @click="goSearch(word.wordName)">{{ word.wordName }}</a></h4>
@@ -61,11 +62,11 @@ export default{
         plain: true,  
       });  
     },
-    goSearch(wordName) {
+    goSearch(wordName,img) {
         if(wordName === ''){
           this.open4();
         }else{
-          this.$router.push({ name: 'search', params:{ wordName: wordName } });
+          this.$router.push({ name: 'search', params:{ wordName: wordName ,img: img} });
         }
     },
     async getWord(){

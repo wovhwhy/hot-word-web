@@ -39,7 +39,8 @@ export default {
       searchKeyWord:this.$route.params.searchKeyWord,
       word:{
         wordName:this.$route.params.wordName,
-        wordMeaning:''
+        wordMeaning:'',
+        img:''
       }
     };
   },
