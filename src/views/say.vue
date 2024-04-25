@@ -4,17 +4,18 @@
       <h1>留言板</h1>
       <div class="text1">
         <span>Name:</span>
-        <var-input variant="outlined" class="input1" placeholder="请输入您的用户名" clearable v-model="name"  />
-       
+        <var-input variant="outlined" class="input1"  placeholder="请输入您的用户名" clearable v-model="name"  />
       </div>
       <div class="text2">
         <span>Message:</span>
-        <var-input variant="outlined" class="input2"  placeholder="请输入您的留言" textarea v-model="message" />
+        <var-input variant="outlined" class="input2"   placeholder="请输入您的留言" textarea v-model="message" />
       </div>
+      <div class="button">
       <var-button
-      color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" text-color="#fff" type="send"  @click="sendMessage" >发送留言</var-button>
+      color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" text-color="#fff" type="send" style="width: 12%;"  @click="sendMessage" >发送留言</var-button>
       <var-button
-      color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" text-color="#fff" type="resetMessage" @click="resetMessage">重置</var-button>
+      color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" text-color="#fff" type="resetMessage" style="width:12%;" @click="resetMessage">重置</var-button>
+    </div>
       <div class="text3">
         <h3>留言：</h3>
       <ul>
@@ -65,6 +66,7 @@ export default {
 h1 {
   margin-top: 20px;
   font-size: 50px;
+  color: black;
 }
 .card {
   background:rgba(179, 160, 163, 0.404) ;
@@ -74,6 +76,7 @@ h1 {
 }
 
 .say {
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +92,7 @@ h1 {
   height: 35px;
   margin-left:310px;
   margin-top: 180px;
+  color: black;
 }
 button {
   margin-top: 20px;
@@ -99,6 +103,8 @@ button {
   height: 200px;
   margin-left: 25px;
   margin-left:310px;
+  color: black;
+
 }
 textarea {
   width: 600px;
@@ -142,7 +148,7 @@ textarea {
 }
 h3{
   font-size: 28px;
- 
+  color: black;
 }
 ul, li {
     list-style: none;
@@ -163,7 +169,14 @@ li{
 margin-right: 20px ;
 }
 .var-button {
-  margin-right: 50px; 
-  margin-left: 50px;
+  margin-right: 50px;
+  margin-left: 40px;
+
+}
+.button{
+  display: flex;
+  margin-left:500px;
+  margin-top: 12px;
+ 
 }
 </style>
