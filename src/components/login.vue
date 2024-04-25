@@ -19,21 +19,6 @@
             <var-button @click="gotoRegister" style="width:35%;margin-top: 20px;" color="linear-gradient(to right bottom, #2980E3, #D0BCFF)" block type="primary">Register</var-button>
         </div>
         </div>
-  <!-- <div class="login">
-    <h2>登录</h2>
-    <form @submit.prevent="login">
-      <label for="username">账号:</label>
-      <input type="text" v-model="username" required>
-      <label for="password">密码:</label>
-      <input type="password" v-model="password" required>
-      <br>
-      <button @click="gohome" type="submit">Login</button>
-      <div class="msg">
-                Don't have account?
-                <router-link to="/sign">Sign up</router-link>
-            </div>
-    </form>
-  </div> -->
 </div>
 </template>
 

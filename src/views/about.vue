@@ -58,19 +58,23 @@ export default{
   position: relative;
   }
 .main img{
-    width: 100%;
-    height: 800px;
+    width: 99%;
+    height: 900px;
     position: relative;
   }
 h1{
-  font-size: 40px;
+  font-size: 45px;
   margin-top: 20px;
+  color: black;
+  padding: 5px;
 }
 p{
   font-size: 22px;
-  margin: 5px 80px;
+  margin: 2px 120px;
   text-align: left;
   display: inline-block;
+  color: rgba(0, 0, 0, 0.84);
+  padding: 15px;
 }
 .logo{
   display: flex;
@@ -88,6 +92,9 @@ p{
 }
 .content2 h2{
   margin-top: 60px;
+  color: black;
+  font-size: 45px;
+
 }
 
 </style>
