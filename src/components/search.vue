@@ -8,7 +8,7 @@
       <hr class="hr-solid">
       <el-container>
         <el-aside  class="left" width="750px" height="auto">
-          <img class="responsive-image" src="../assets/图片2.png" alt="image">
+          <img class="responsive-image" :src = word.img alt="image">
         </el-aside>
         <el-main>
           <h3> {{ word.wordName }}</h3> 
@@ -54,13 +54,14 @@ export default {
       this.getWordMeaning(this.word.wordName);
       if (this.word.wordMeaning == '') {
         this.word.wordMeaning = '未找到相关搜索结果。';
+        this.word.img = '../assets/图片2.png'
         // this.word.wordName = '';
       } 
     },
-
     async getWordMeaning(wordName){
         const wordMeaning = await user.getWordDetal({ wordName });
         this.word.wordMeaning=wordMeaning[0].wordMeaning;
+        this.word.img = wordMeaning[0].img;
     }
   }
 };
