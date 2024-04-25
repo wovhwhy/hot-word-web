@@ -112,7 +112,7 @@ return{
     font-size: 30px;
     text-align: center;
     vertical-align: middle;
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.963);
     padding: 15px;
 
   }
