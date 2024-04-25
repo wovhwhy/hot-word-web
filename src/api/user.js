@@ -9,6 +9,14 @@ const user = {
     },
     getWord(){
         return request(`${moduleUrl}/getWord`)
+    },
+    //获取用户密码
+    getUserPassword(userId){
+        return request(`${moduleUrl}/getUserPassword`,{ userId });
+    },
+    //用户注册
+    addUser(userId,password){
+        return request(`${moduleUrl}/addUser`,{ userId, password})
     }
 };
 
