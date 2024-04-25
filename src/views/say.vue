@@ -4,14 +4,17 @@
       <h1>留言板</h1>
       <div class="text1">
         <span>Name:</span>
-        <input type="text" v-model="name" placeholder="请输入您的用户名">
+        <var-input variant="outlined" class="input1" placeholder="请输入您的用户名" clearable v-model="value4"  />
+       
       </div>
       <div class="text2">
         <span>Message:</span>
-        <textarea v-model="message" style="vertical-align: top;" placeholder="请输入您的留言"></textarea>
+        <var-input variant="outlined" class="input2"  placeholder="请输入您的留言" textarea v-model="value10" />
       </div>
-      <el-button type="send"  @click="sendMessage">发送留言</el-button>
-    <el-button type="resetMessage" @click="resetMessage">重置</el-button>
+      <var-button
+      color="linear-gradient(to right bottom, #6750A4, #D0BCFF)" text-color="#fff" type="send"  @click="sendMessage" >发送留言</var-button>
+      <var-button
+      color="linear-gradient(to right bottom, #6750A4, #D0BCFF)" text-color="#fff" type="resetMessage" @click="resetMessage">重置</var-button>
       <div class="text3">
         <h3>留言：</h3>
       <ul>
@@ -29,12 +32,14 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 export default {
   data() {
     return {
       name: '',
       message: '',
-      messages: []
+      messages: [],
+     
     };
   },
   methods: {
@@ -63,7 +68,7 @@ h1 {
   font-size: 50px;
 }
 .card {
-  background:rgba(138,125,127,0.5) ;
+  background:rgba(179, 160, 163, 0.404) ;
   width: 60%;
   height: 100%;
   backdrop-filter: blur(10px); /*模糊度，磨砂感 */
@@ -93,10 +98,10 @@ button {
 }
 .text2 {
   display: flex;
-  margin-top: 20px;
+  margin-top: 50px;
   height: 200px;
   margin-left: 25px;
-  justify-content: center;
+  margin-left:310px;
 }
 textarea {
   width: 600px;
@@ -104,9 +109,14 @@ textarea {
   padding-top: 10px;
   font-size: 15px
 }
-.text1 input {
-  width: 200px;
-  font-size: 15px;
+.text1 .input1{
+  border-width: 3px;
+  margin-left: 30px;
+  padding: 5px;
+}
+.text2 .input2{
+  width: 500px;
+ 
 }
 .end {
   background-color: rgba(33, 27, 27, 0.826);
@@ -154,5 +164,9 @@ li{
 .text1 span,
 .text2 span{
 margin-right: 20px ;
+}
+.var-button {
+  margin-right: 50px; 
+  margin-left: 50px;
 }
 </style>
