@@ -67,7 +67,7 @@ const router = createRouter({
        
     },
     {
-        path: '/search/:wordName/:img',//地址栏路径
+        path: '/search/:wordName',//地址栏路径
         name: 'search',//路由名称
         component:()=> import('../components/search.vue'),
         meta: {
