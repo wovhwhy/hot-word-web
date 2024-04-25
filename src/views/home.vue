@@ -102,14 +102,15 @@ return{
   }
   
   .hr-solid {
-		border: 1;
 		border-top: 2px solid #d0d0d5;
     margin-bottom: 20px;
 	}
   .content .left h2{
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
     vertical-align: middle;
+    color: rgb(0, 0, 0);
+    padding: 15px;
 
   }
   .content1{
@@ -126,6 +127,7 @@ return{
     font-size: 25px;
     line-height: 1.5; 
     text-align: left;
+    color: rgba(0, 0, 0, 0.806);
   }
   .main .text{
     padding: 20px;

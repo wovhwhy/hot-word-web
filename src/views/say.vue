@@ -4,23 +4,22 @@
       <h1>留言板</h1>
       <div class="text1">
         <span>Name:</span>
-        <var-input variant="outlined" class="input1" placeholder="请输入您的用户名" clearable v-model="value4"  />
+        <var-input variant="outlined" class="input1" placeholder="请输入您的用户名" clearable v-model="name"  />
        
       </div>
       <div class="text2">
         <span>Message:</span>
-        <var-input variant="outlined" class="input2"  placeholder="请输入您的留言" textarea v-model="value10" />
+        <var-input variant="outlined" class="input2"  placeholder="请输入您的留言" textarea v-model="message" />
       </div>
       <var-button
-      color="linear-gradient(to right bottom, #6750A4, #D0BCFF)" text-color="#fff" type="send"  @click="sendMessage" >发送留言</var-button>
+      color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" text-color="#fff" type="send"  @click="sendMessage" >发送留言</var-button>
       <var-button
-      color="linear-gradient(to right bottom, #6750A4, #D0BCFF)" text-color="#fff" type="resetMessage" @click="resetMessage">重置</var-button>
+      color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" text-color="#fff" type="resetMessage" @click="resetMessage">重置</var-button>
       <div class="text3">
         <h3>留言：</h3>
       <ul>
         <li v-for="(msg, index) in messages" :key="index"> 
           <strong>{{ msg.name }}:</strong> {{ msg.message }}
-          <hr class="hr-solid">
         </li>
       </ul>
     </div>
@@ -89,9 +88,7 @@ h1 {
   display: flex;
   height: 35px;
   margin-left:310px;
-  /* justify-content:flex-start; */
-  /* align-items:center ;  */
-  margin-top: 200px;
+  margin-top: 180px;
 }
 button {
   margin-top: 20px;
@@ -141,7 +138,7 @@ textarea {
   height: 20px;
   text-align: left;
   margin-top: 50px;
-  margin-left: 50px;
+  margin-left: 150px;
 }
 h3{
   font-size: 28px;
@@ -154,13 +151,13 @@ ul, li {
 }
 li{
   margin-top: 10px;
+  padding: 15px;
   font-size: 22px;
+  border-bottom: 2px solid #6d6d85;
+  border-radius: 10px;
+  width: 900px;
 }
-.hr-solid {
-		border: 1;
-		border-top: 1px solid #6d6d85;
-    margin-bottom: 20px;
-	}
+
 .text1 span,
 .text2 span{
 margin-right: 20px ;
