@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 h1 {
-  margin-top: 20px;
+  margin-top: 10%;
   font-size: 50px;
   color: black;
 }

@@ -7,7 +7,10 @@ const router = createRouter({
         { 
             path: '/', 
             name:'',
-            redirect:'/home'
+            component:()=> import('../views/home.vue'),
+            meta: {
+                home: true,
+            },
         },
         {
             path: '/home',//地址栏路径
@@ -18,14 +21,14 @@ const router = createRouter({
             },
         },
         {
-          path: '/login',//地址栏路径
-          name: 'login',//路由名称
-          component:()=> import('../components/login.vue'),
-          meta: {
-              login: true,
-          },
-      },
-      {
+            path: '/login',//地址栏路径
+            name: 'login',//路由名称
+            component:()=> import('../components/login.vue'),
+            meta: {
+                login: true,
+            },
+        },
+        {
         path: '/about',//地址栏路径
         name: 'about',//路由名称
         component:()=> import('../views/about.vue'),
