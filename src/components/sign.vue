@@ -9,26 +9,16 @@
                     <var-icon class="prepend-icon" name="account-circle-outline" />
                 </template>
                 </var-input>
-                <var-input style="width:32%;margin-top: 20px;background-color:rgba(2, 0, 80, 0.1);" variant="outlined" placeholder="password" v-model="userRegister.password">
+                <var-input type="password" style="width:32%;margin-top: 20px;background-color:rgba(2, 0, 80, 0.1);" variant="outlined" placeholder="password" v-model="userRegister.password">
                 <template #prepend-icon>
                     <var-icon class="prepend-icon" name="lock-outline" />
                 </template>
                 </var-input>
-        </div>
+        </div> 
         <div class="login">
             <var-button @click="gotoLogin" style="width:35%;" color="linear-gradient(to right bottom, #2980E3, #D0BCFF)" block type="primary">Register</var-button>
         </div>
         </div>
-    <!-- <h2>注册</h2>
-    <form @submit.prevent="login">
-      <label for="username">电话号码:</label>
-      <input type="text" v-model="username" required>
-      <label for="password">密码:</label>
-      <input type="password" v-model="password" required>
-      <br>
-      <button @click="gohome" type="submit">注册</button>
-    </form> -->
-  <!-- </div> -->
 </div>
 
 </template>

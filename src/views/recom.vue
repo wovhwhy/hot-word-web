@@ -18,7 +18,7 @@
                 <div  v-for="word in words" :key="word.wordId" class="col-lg-4 col-md-6 mt-5">
                     <div class="grids5-info">
                         <a  @click="goSearch(word.wordName)" class="d-block zoom"><img :src=word.img alt=""
-                                class="img-fluid news-image" /></a>
+                                class="img-fluid news-image" style="max-height: 600px;"/></a>
                         <div class="blog-info">
                             <h4><a @click="goSearch(word.wordName)">{{ word.wordName }}</a></h4>
                             <p class="date"><span class="fa fa-calendar mr-2"></span> {{ word.date }}</p>
@@ -130,5 +130,7 @@ h2{
     font-size: 28px;
     margin-top: 25px;
  }
-
+ .img-fluid news-image{
+  height: 500px;
+ }
 </style>

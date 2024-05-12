@@ -8,7 +8,7 @@
                     <var-icon class="prepend-icon" name="account-circle-outline" />
                 </template>
                 </var-input>
-                <var-input style="width:32%;margin-top: 20px;background-color:rgba(2, 0, 80, 0.1);" variant="outlined" placeholder="password" v-model="userLogin.password">
+                <var-input type="password" style="width:32%;margin-top: 20px;background-color:rgba(2, 0, 80, 0.1);" variant="outlined" placeholder="password" v-model="userLogin.password">
                 <template #prepend-icon>
                     <var-icon class="prepend-icon" name="lock-outline" />
                 </template>
@@ -16,7 +16,7 @@
         </div>
         <div class="login">
             <var-button @click="gotoHome" style="width:35%;" color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" block type="primary">Login</var-button>
-            <var-button @click="gotoRegister" style="width:35%;margin-top: 20px;" color="linear-gradient(to right bottom, #2980E3, #D0BCFF)" block type="primary">Register</var-button>
+            <var-button @click="gotoRegister" style="width:35%;margin-top: 18px;" color="linear-gradient(to right bottom, #2980E3, #D0BCFF)" block type="primary">Register</var-button>
         </div>
         </div>
 </div>
