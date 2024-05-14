@@ -1,25 +1,41 @@
 <template>
   <div class=about>
  <div class=main>
-    <img src="../assets/about.png" alt="">
-    <div class="content1" v-for="item in datalist1" :key="item.p">
-    <h1>——网站简介——</h1>
+    <img src="../assets/about1.png" alt="">
+    <div class="list-container">
+    <div class="list1" >
+    <div class="content1"  v-for="item in datalist1" :key="item.p">
+      <div class="intro-section">
+    <h1>网站简介</h1>
+    <hr>
     <p>{{ item.p }}</p>
+  <!-- </div> -->
+</div>
+</div>
+</div>
       <div class="logo">
-        <img src="../assets/logo4.png" alt="">
-        <img src="../assets/logo5.png" alt="">
-      </div>
-      <div class="content2">
-        <h2>——发展历程——</h2>
-        <div class="content3" v-for="item in datalist" :key="item.p"> 
+        <img style="margin: 0 90px;" src="../assets/logo6.png" alt="">
+        <img style="margin-left: 20px;" src="../assets/logo7.png" alt="">
+    </div>
+    
+    <div class="list-container2">
+      <div class="list1" >
+           <div class="intro-section">
+             <h2>发展历程</h2>
+        <hr>
+        <div class="content2" v-for="item in datalist" :key="item.p"> 
    <p>{{ item.p}}</p>
+   </div>
+   <img style="margin-top: 5px;" src="../assets/进程.png" alt="">
   </div>
-    <img src="../assets/进程.png" alt="">
-      </div>
+</div>
   </div>
-  <foot></foot> 
+    </div>
+  </div>
+ 
+  <!-- <foot></foot>  -->
 </div>
-</div>
+
  </template>
 
 <script>
@@ -54,46 +70,84 @@ export default{
   margin:0 auto;
 }
 .main{
-  width: 100%;
+  width: 95%;
   position: relative;
+  margin:0 auto;
   }
 .main img{
-    width: 99%;
-    height: 900px;
+    width: 85%;
+    height: 750px;
     position: relative;
   }
+.list1{
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: white;
+  height: 300px;
+  width: 87%;
+
+}
+.list-container {
+  margin: 0 20px; 
+}
+.intro-section {
+  background-color: #ffffff; 
+  padding: 20px; 
+  margin-top: 20px;
+}
+.list-container2 {
+  margin: 0 20px; 
+  height: 500px;
+ 
+}
 h1{
   font-size: 45px;
-  margin-top: 20px;
-  color: black;
-  padding: 5px;
+  text-align: left;
+  margin-left: 60px;
+  /* margin-top: 10px; */
+  color:#555555;
+  padding: 10px;
 }
+
 p{
+  text-align: left;
+  margin-left: 60px;
+  margin-right: 60px;
   font-size: 22px;
-  margin: 2px 120px;
+  /* margin: 2px 120px; */
   text-align: left;
   display: inline-block;
-  color: rgba(0, 0, 0, 0.84);
-  padding: 15px;
+  color: #292929;
+  padding: 10px;
+  letter-spacing: 2px;
 }
 .logo{
+  margin-top :40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position:relative;
 }
 .logo img{
   height: 350px;
   width: 350px;
   margin: 0 10px;
 }
-.content2 img{
-  height: 600px;
-  width: 900px;
-}
-.content2 h2{
-  margin-top: 60px;
-  color: black;
+/* .content2 img{
+  height: 500px;
+  width: 800px;
+ 
+} */
+ h2{
+  color:#555555;
   font-size: 45px;
+  padding: 10px;
+  font-size: 45px;
+  text-align: left;
+  margin-left: 60px;
+  margin-top: 10px;
 
 }
 

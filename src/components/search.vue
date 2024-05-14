@@ -1,14 +1,14 @@
 <template>
   <div class="body">
   <div class="main">
-    <el-card style="width:1500px; height:800px;" shadow="always">
+    <el-card style="width:1500px; height:900px;" shadow="always">
       <div class="common-layout">
     <el-container>
       <el-header><h2>搜索结果</h2></el-header>
       <hr class="hr-solid">
       <el-container>
         <el-aside  class="left" width="750px" height="auto">
-          <img class="responsive-image" :src = word.img alt="image">
+          <img class="responsive-image" :src = word.img alt="image" >
         </el-aside>
         <el-main>
           <h3> {{ word.wordName }}</h3> 
@@ -76,7 +76,7 @@ export default {
   justify-content: center;
   text-align: center;
   display: inline-block;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .search {
   display: flex;
@@ -108,7 +108,9 @@ p{
     margin-top: 20px;
 	}
 .left{
-  margin-top: 20px;
+
+  width: 36%;
+  height: 100%;
 }
 .responsive-image {
   width: 90%;

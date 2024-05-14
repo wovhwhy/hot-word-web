@@ -177,6 +177,9 @@ margin-right: 20px ;
   display: flex;
   margin-left:500px;
   margin-top: 12px;
- 
 }
+.input1 {
+    color:black;
+}
+
 </style>
