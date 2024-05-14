@@ -15,8 +15,8 @@
                 </var-input>
         </div>
         <div class="login">
-            <var-button @click="gotoHome" style="width:35%;" color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" block type="primary">Login</var-button>
-            <var-button @click="gotoRegister" style="width:35%;margin-top: 18px;" color="linear-gradient(to right bottom, #2980E3, #D0BCFF)" block type="primary">Register</var-button>
+            <var-button @click="gotoHome" style="width:30%;" color="linear-gradient(to right bottom,  #2980E3, #D0BCFF)" block type="primary">Login</var-button>
+            <var-button @click="gotoRegister" style="width:30%;margin-top: 18px;" color="linear-gradient(to right bottom, #2980E3, #D0BCFF)" block type="primary">Register</var-button>
         </div>
         </div>
 </div>
@@ -81,52 +81,15 @@ width:99%;
 position:fixed;
 height:100%;
 background-size:100%;
+background-size: cover;
 margin-right: 5px;
 }
-/* .login{
-  margin-top:300px
-}
-h2 {
-  text-align: center;
-}
-  
-form {
-  margin-top: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input {
-  width: 25%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-button {
-  width: 5%;
-  padding: 8px;
-  background-color: pink;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: rgb(134, 43, 58);
-} */
-
 .id{
     margin-top: 8%;
     margin-left:43%;
 }
 .login{
-    margin-top: 6%;
-    margin-left:42%;
+    margin-top: 1.5%;
+    margin-left:43%;
 }
 </style>

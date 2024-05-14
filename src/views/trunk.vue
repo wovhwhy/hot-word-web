@@ -1,7 +1,7 @@
 <template>
   <div class="heard">
     <div class="logo">
-      <img src="../assets/logo3.jpg" alt="logo">
+      <img src="../assets/搜索.jpg" alt="logo">
       <span>网络热词</span>
     </div>
     <div class="heardmenu">
@@ -11,7 +11,7 @@
         <li @click="goabout" style="cursor: pointer;">关于我们</li>
         <li @click="gosay" style="cursor: pointer;">留言板</li>
       </ul>
-      <el-button type="danger" @click="gosign" >登录/注册</el-button>
+      <el-button type="danger"  color="rgb(237, 147, 162)" @click="gosign" >登录/注册</el-button>
     </div>
   </div>
 
@@ -50,11 +50,14 @@ export default {
 .heard {
   width: 100%;
   height: 90px;
-  background-color: #343232;
+  background-color:white;
+  /* border-bottom: 2px solid; */
   display: flex;
   justify-content: space-between;
-  color: white;
+  color:rgb(237, 147, 162);
+  /* color: rgba(108, 192, 108, 0.92); */
   align-items: center;
+  border-bottom: 1px solid  #ca7d8ac2;;
 }
 
 .logo {
@@ -64,15 +67,15 @@ export default {
 }
 
 .logo img {
-  margin-right: 15px;
-  height: 85px;
+  height:88px;
+  width: 100px;
   border: 1px;
   border-radius: 10%;
 }
 
 .logo span {
   font-size: 28px;
-  color: #F56C6C;
+  color:rgb(237, 147, 162) ;
   font-weight: bold;
 }
 
@@ -81,6 +84,7 @@ export default {
   text-align: center;
   display: flex;
   align-items: center;
+
 
 }
 
@@ -109,6 +113,7 @@ export default {
 .el-button--danger {
   font-weight: bold; 
   font-size: 22px; 
+  color: white;
   padding: 25px 50px; /* 设置按钮的内边距，增大按钮的大小 */
 }
 </style>

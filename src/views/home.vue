@@ -4,12 +4,14 @@
       <lun></lun>
 
   </div>
+ 
   <div class="nav">
     <span>热词潮流，尽在指尖</span>
   </div>
+  <div class="center">
   <div class="content">
     <div class="left">
-      <img src="../assets/图片2.png" alt="image">
+      <img src="../assets/logo6.png" alt="image">
        <h2>{{title }}</h2>
         <hr class="hr-solid">
        <p>  {{ introudes }}</p>
@@ -26,6 +28,7 @@
    <p>{{ item.mean }}</p> -->
   </div>
     </div>
+  </div>
     <div class="end">
       <span>版权声明 | 联系方式 | 刊登广告 | 关于我们<br>版权所有</span>
     </div>
@@ -71,16 +74,19 @@ return{
   }
   
   .nav{
-    background-color: rgba(33, 27, 27, 0.826);
-    height: 50px;
+    /* background-color: #ED93A2; */
+  
+    background-color: #ca7d8ac2; 
+    height: 40px;
     width: 97%;
     justify-content: center;
     align-items: center; 
     margin-left: 35px;
-    margin-right: 20px
+    margin-right: 20px;
+ 
   }
   .nav span{
-    font-size: 35px ;
+    font-size: 28px ;
     color: white;
     letter-spacing: 0.6em;
   }
@@ -97,6 +103,11 @@ return{
   padding: 10px;
 }
 
+.center{
+  margin: 0 auto; 
+  max-width: 92%;
+
+}
   .content .left img{
     height:400px;
     width:400px;
@@ -132,14 +143,16 @@ return{
     text-align: left;
     color: rgba(0, 0, 0, 0.806);
   }
-  .main .text{
+.text{
     padding: 20px;
     margin-left: 15px; 
+    margin-top: 20px;
   }
-  .main .text h2{
+ .text h2{
     text-align: left;
     color: rgb(134, 43, 58);
     font-size: 28px;
+    margin-top: 30px;
   }
   .main .text ul{
     font-size: 20px;
@@ -147,8 +160,9 @@ return{
     margin-left: 20px; 
   }
   .end{
-    background-color: rgba(33, 27, 27, 0.826);
-    height: 150px;
+    border-top: 1px solid rgba(124, 76, 84, 0.646);
+    background-color: #ca7d8ac2;
+    height: 110px;
     width: 100%;
     justify-content: center;
      align-items: center; 

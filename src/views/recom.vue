@@ -5,7 +5,6 @@
 </div>
 </div>
 
-
 <section class="w3l-news" id="news">
   <div id="grids5-block" class="py-5">
     <div class="search-box">
@@ -35,7 +34,7 @@
 
 
 <script>
-import icon from "../components/icon.vue"
+import icon from "../components/icon.vue";
 import foot from "../components/foot.vue";
 import { ElMessage } from 'element-plus';
 import "../assets/css/style-liberty.css";

@@ -80,6 +80,7 @@ position:fixed;
 height:100%;
 background-size:100%;
  margin-right: 5px;
+ background-size: cover;
 }
 /* 
 h2 {
