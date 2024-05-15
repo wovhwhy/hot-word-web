@@ -75,8 +75,8 @@ export default{
   margin:0 auto;
   }
 .main img{
-    width: 85%;
-    height: 750px;
+    width: 83%;
+    height: 850px;
     position: relative;
   }
 .list1{

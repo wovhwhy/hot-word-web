@@ -1,7 +1,7 @@
 <template>
   <div class=recom>
  <div class=main>
-    <img src="../assets/recom.png" alt="">
+    <img src="../assets/recoom.png" alt="">
 </div>
 </div>
 
@@ -17,7 +17,7 @@
                 <div  v-for="word in words" :key="word.wordId" class="col-lg-4 col-md-6 mt-5">
                     <div class="grids5-info">
                         <a  @click="goSearch(word.wordName)" class="d-block zoom"><img :src=word.img alt=""
-                                class="img-fluid news-image" style="max-height: 600px;"/></a>
+                                class="img-fluid news-image  center-image" style="max-height: 500px;"/></a>
                         <div class="blog-info">
                             <h4><a @click="goSearch(word.wordName)">{{ word.wordName }}</a></h4>
                             <p class="date"><span class="fa fa-calendar mr-2"></span> {{ word.date }}</p>
@@ -84,8 +84,8 @@ export default{
   position: relative;
   }
 .main img{
-    width: 95%;
-    height: 850px;
+    width: 75%;
+    height: 860px;
     position: relative;
   }
  .search-box {
@@ -129,7 +129,10 @@ h2{
     font-size: 28px;
     margin-top: 25px;
  }
- .img-fluid news-image{
+.center-image{
   height: 500px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
  }
 </style>

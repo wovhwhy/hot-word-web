@@ -78,7 +78,7 @@ export default {
   color:rgb(237, 147, 162);
   /* color: rgba(108, 192, 108, 0.92); */
   align-items: center;
-  border-bottom: 1px solid  #ca7d8ac2;;
+  border-bottom: 1px solid  #ca7d8ac2;
 }
 
 .logo {
@@ -105,13 +105,12 @@ export default {
   text-align: center;
   display: flex;
   align-items: center;
-
-
 }
 
 .heardmenu ul {
   list-style-type: none;
   display: flex;
+
 }
 
 .heardmenu li {
