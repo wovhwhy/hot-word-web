@@ -10,9 +10,9 @@
         <el-aside  class="left" width="750px" height="auto">
           <img class="responsive-image" :src = word.img alt="image" >
         </el-aside>
-        <el-main>
+        <el-main  class="center-container">
           <h3> {{ word.wordName }}</h3> 
-          <br>
+        
       <p> {{ word.wordMeaning }}</p>
         </el-main>
       </el-container>
@@ -88,14 +88,21 @@ export default {
 h2{
   font-size: 32px;
   margin-top: 15px;
-  margin-bottom: 20px;
 }
 h3{
   font-size: 28px;
+  line-height: 1.5;
+  margin-top: 80px;
 }
 p{
   font-size: 25px;
   color: rgba(0, 0, 0, 0.664);
+  /* text-align: left; */
+  line-height: 1.5;
+  margin: 0 80px;
+  padding: 10px;
+  text-align: justify;
+  text-align-last: left;
 }
 .end{
   bottom: 0;
@@ -104,11 +111,10 @@ p{
 .hr-solid {
 		border: 1px;
 		border-top: 2px solid #d0d0d5;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: 20px;
 	}
 .left{
-
   width: 36%;
   height: 100%;
 }
@@ -117,5 +123,11 @@ p{
   height: 90%;
   object-fit: contain; /* 保持图片比例并填充整个容器 */
 }
+
+  .center-container {
+  display: flex; 
+  flex-direction: column;
+}
+
 
 </style>
