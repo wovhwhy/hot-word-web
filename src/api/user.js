@@ -10,6 +10,9 @@ const user = {
     getWord(){
         return request(`${moduleUrl}/getWord`)
     },
+    getWord2(){
+        return request(`${moduleUrl}/getWord2`)
+    },
     //获取用户密码
     getUserPassword(userId){
         return request(`${moduleUrl}/getUserPassword`,{ userId });

@@ -55,9 +55,7 @@ import user from '../api/user'
         words:[]
       }
     },
-    created(){
-      console.log(this.userId);
-    }
+    created(){}
 }
   </script>
   
