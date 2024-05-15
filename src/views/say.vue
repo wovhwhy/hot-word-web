@@ -69,7 +69,7 @@ h1 {
   color: black;
 }
 .card {
-  background:rgba(179, 160, 163, 0.404) ;
+  background:rgba(252, 246, 247, 0.404) ;
   width: 60%;
   height: 100%;
   backdrop-filter: blur(10px); /*模糊度，磨砂感 */
@@ -80,17 +80,18 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../assets/背景.jpg");
+  /* background: url("../assets/背景.jpg"); */
   width: 99%;
   position: fixed;
-  height: 100%;
+  height: 90%;
   background-size: 100%;
   margin-right: 5px;
+  overflow: auto;
 }
 .text1 {
   display: flex;
   height: 35px;
-  margin-left:310px;
+  margin-left:150px;
   margin-top: 180px;
   color: black;
 }
@@ -101,8 +102,7 @@ button {
   display: flex;
   margin-top: 50px;
   height: 200px;
-  margin-left: 25px;
-  margin-left:310px;
+  margin-left:150px;
   color: black;
 
 }
@@ -123,7 +123,8 @@ textarea {
 }
 .end {
   background-color: rgba(33, 27, 27, 0.826);
-  height: 150px;
+  /* height: 150px; */
+  height:10%;
   width: 99%;
   justify-content: center;
   align-items: center;

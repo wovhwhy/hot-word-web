@@ -67,7 +67,6 @@ const router = createRouter({
         meta: {
             WordMeaning: true,
         },
-       
     },
     {
         path: '/search/:wordName',//地址栏路径

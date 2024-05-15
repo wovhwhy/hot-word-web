@@ -50,6 +50,7 @@ export default {
                 Snackbar.success('登录成功');
                 localStorage.setItem('userId',this.userLogin.userId);
                 this.$router.push({name:'home'});
+                this.$emit('login', {islogin: true});
             }else{
                 Snackbar.error('登录失败,请检查id和密码');
             }
