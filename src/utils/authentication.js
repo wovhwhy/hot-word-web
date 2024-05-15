@@ -28,6 +28,7 @@ const authentication = {
         if (token) {
             // 将 jwt 保存到 localStorage
             localStorage.setItem('token', token);
+            console.log(token);
             return true;
         } else {
             return false;

@@ -21,7 +21,7 @@
                         <div class="blog-info">
                             <h4><a @click="goSearch(word.wordName)">{{ word.wordName }}</a></h4>
                             <p class="date"><span class="fa fa-calendar mr-2"></span> {{ word.date }}</p>
-                            <a href="blog-single.html" class="btn btn-news mt-4">Read More</a>
+                            <a @click="goSearch(word.wordName)" class="btn btn-news mt-4">Read More</a>
                         </div>
                     </div>
                 </div>
