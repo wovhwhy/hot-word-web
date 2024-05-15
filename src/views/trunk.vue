@@ -11,8 +11,8 @@
         <li @click="goabout" style="cursor: pointer;">关于我们</li>
         <li @click="gosay" style="cursor: pointer;">留言板</li>
       </ul>
-      <el-button v-show="userId === null" type="danger"  color="rgb(237, 147, 162)" @click="gosign" >登录/注册</el-button>
-      <el-button v-show="userId!=null" type="danger"  color="rgb(237, 147, 162)" @click="tui" >退出</el-button>
+      <el-button v-if="this.userId === null" type="danger"  color="rgb(237, 147, 162)" @click="gosign" >登录/注册</el-button>
+      <el-button v-if="this.userId!==null" type="danger"  color="rgb(237, 147, 162)" @click="tui" >退出</el-button>
     </div>
   </div>
 
@@ -25,15 +25,13 @@
 export default {
   name: 'trunk',
   watch: {
-    userId(newval) {
-      if (newval) {
+    local(newval) {
         this.userId = newval;
-      }
     }
   },
   data() {
     return {
-      userId:localStorage.getItem('userId')
+      userId:null,
     };
   },
   props: {
@@ -59,8 +57,8 @@ export default {
       this.$router.push('/say');
     },
     tui(){
+      this.userId = null;
       localStorage.removeItem('userId');
-      consle.log('this.userId');
       this.$router.push('/home');
     }
   },

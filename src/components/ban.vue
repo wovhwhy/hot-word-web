@@ -6,9 +6,9 @@
       <var-card
         v-for="(item, index) in words"
         :key="index"
-        src="../../public/logo6.png"
+        :src="item.img"
         image-height="350px"
-        image-width="360px"
+        image-width="370px"
         :title="item.wordName"
         v-model:floating="floating"
         class="col-lg-4 col-md-6 mt-5"
@@ -50,7 +50,6 @@ interface Word {
   wordMeaning: string;
   img: string;
   wordId: number;
-  date: string;
 }
 const translateY = ref("100%");
 const current = ref(null);
@@ -60,7 +59,7 @@ function handleHover(hovering) {
 const words = ref<Word[]>([]);
 const expand = ref(true);
 const getWord = async () => {
-  const words1 = await user.getWord();
+  const words1 = await user.getWord2();
   words.value = words1 as Word[];
 };
 onMounted(getWord);

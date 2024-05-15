@@ -41,16 +41,26 @@ export default {
       // components:{
       // }
     }
-  },methods:{
+  },
+  methods:{
     async gotoHome(){
       const userId = this.userLogin.userId;
             const result = await authentication.login({ userId: userId, password:this.userLogin.password });
             if(result === true ){
+                // window.location.reload();
                 this.result = true;
                 Snackbar.success('登录成功');
                 localStorage.setItem('userId',this.userLogin.userId);
-                this.$router.push({name:'home'});
-                this.$emit('login', {islogin: true});
+                // localStorage.setItem('redirectAfterReload', '/home'); // 设置重定向的路由  
+                // window.location.reload();
+                // this.$globalVariable = this.userLogin.userId;
+                console.log(localStorage.getItem('userId'));
+                setTimeout(() => {  
+  this.$router.push({ name: 'home' });  
+}, 6000);
+                // this.$router.push({name:'home'});
+                
+                // this.$emit('send-id',this.userLogin.userId);
             }else{
                 Snackbar.error('登录失败,请检查id和密码');
             }
